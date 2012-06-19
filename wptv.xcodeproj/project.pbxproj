@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		79C39217CFCE4501BBFD7011 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2B7A059F4ED43C99478D51B /* libPods.a */; };
+		E134F0FD158FFC5F0088FEF2 /* VideoGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E134F0FC158FFC5F0088FEF2 /* VideoGridViewController.m */; };
+		E134F100158FFCD40088FEF2 /* AFWordpressComClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E134F0FF158FFCD40088FEF2 /* AFWordpressComClient.m */; };
+		E134F103158FFDCF0088FEF2 /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = E134F102158FFDCF0088FEF2 /* Video.m */; };
 		E1354227158FF9500052465B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1354226158FF9500052465B /* UIKit.framework */; };
 		E1354229158FF9500052465B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1354228158FF9500052465B /* Foundation.framework */; };
 		E135422B158FF9500052465B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E135422A158FF9500052465B /* CoreGraphics.framework */; };
@@ -14,34 +18,28 @@
 		E1354233158FF9500052465B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E1354232158FF9500052465B /* main.m */; };
 		E1354237158FF9500052465B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1354236158FF9500052465B /* AppDelegate.m */; };
 		E135423A158FF9500052465B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1354238158FF9500052465B /* MainStoryboard.storyboard */; };
-		E135423D158FF9500052465B /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E135423C158FF9500052465B /* FirstViewController.m */; };
-		E135423F158FF9500052465B /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = E135423E158FF9500052465B /* first.png */; };
-		E1354241158FF9500052465B /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1354240158FF9500052465B /* first@2x.png */; };
-		E1354244158FF9500052465B /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1354243158FF9500052465B /* SecondViewController.m */; };
-		E1354246158FF9500052465B /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = E1354245158FF9500052465B /* second.png */; };
-		E1354248158FF9500052465B /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1354247158FF9500052465B /* second@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B2B7A059F4ED43C99478D51B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5BFC2E345824D0597A11901 /* Pods.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		E134F0FB158FFC5F0088FEF2 /* VideoGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoGridViewController.h; sourceTree = "<group>"; };
+		E134F0FC158FFC5F0088FEF2 /* VideoGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoGridViewController.m; sourceTree = "<group>"; };
+		E134F0FE158FFCD40088FEF2 /* AFWordpressComClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFWordpressComClient.h; sourceTree = "<group>"; };
+		E134F0FF158FFCD40088FEF2 /* AFWordpressComClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFWordpressComClient.m; sourceTree = "<group>"; };
+		E134F101158FFDCF0088FEF2 /* Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Video.h; sourceTree = "<group>"; };
+		E134F102158FFDCF0088FEF2 /* Video.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Video.m; sourceTree = "<group>"; };
 		E1354222158FF9500052465B /* wptv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wptv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1354226158FF9500052465B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E1354228158FF9500052465B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E135422A158FF9500052465B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		E135422E158FF9500052465B /* wptv-Info.plist */ = {isa = PBXFileReference; path = "wptv-Info.plist"; sourceTree = "<group>"; };
+		E135422E158FF9500052465B /* wptv-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "wptv-Info.plist"; sourceTree = "<group>"; };
 		E1354230158FF9500052465B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E1354232158FF9500052465B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E1354234158FF9500052465B /* wptv-Prefix.pch */ = {isa = PBXFileReference; path = "wptv-Prefix.pch"; sourceTree = "<group>"; };
-		E1354235158FF9500052465B /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		E1354234158FF9500052465B /* wptv-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "wptv-Prefix.pch"; sourceTree = "<group>"; };
+		E1354235158FF9500052465B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E1354236158FF9500052465B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E1354239158FF9500052465B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		E135423B158FF9500052465B /* FirstViewController.h */ = {isa = PBXFileReference; path = FirstViewController.h; sourceTree = "<group>"; };
-		E135423C158FF9500052465B /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		E135423E158FF9500052465B /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		E1354240158FF9500052465B /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		E1354242158FF9500052465B /* SecondViewController.h */ = {isa = PBXFileReference; path = SecondViewController.h; sourceTree = "<group>"; };
-		E1354243158FF9500052465B /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		E1354245158FF9500052465B /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		E1354247158FF9500052465B /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +50,7 @@
 				E1354227158FF9500052465B /* UIKit.framework in Frameworks */,
 				E1354229158FF9500052465B /* Foundation.framework in Frameworks */,
 				E135422B158FF9500052465B /* CoreGraphics.framework in Frameworks */,
+				79C39217CFCE4501BBFD7011 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +63,7 @@
 				E135422C158FF9500052465B /* wptv */,
 				E1354225158FF9500052465B /* Frameworks */,
 				E1354223158FF9500052465B /* Products */,
+				B5BFC2E345824D0597A11901 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +81,7 @@
 				E1354226158FF9500052465B /* UIKit.framework */,
 				E1354228158FF9500052465B /* Foundation.framework */,
 				E135422A158FF9500052465B /* CoreGraphics.framework */,
+				B2B7A059F4ED43C99478D51B /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -91,15 +92,13 @@
 				E1354235158FF9500052465B /* AppDelegate.h */,
 				E1354236158FF9500052465B /* AppDelegate.m */,
 				E1354238158FF9500052465B /* MainStoryboard.storyboard */,
-				E135423B158FF9500052465B /* FirstViewController.h */,
-				E135423C158FF9500052465B /* FirstViewController.m */,
-				E135423E158FF9500052465B /* first.png */,
-				E1354240158FF9500052465B /* first@2x.png */,
-				E1354242158FF9500052465B /* SecondViewController.h */,
-				E1354243158FF9500052465B /* SecondViewController.m */,
-				E1354245158FF9500052465B /* second.png */,
-				E1354247158FF9500052465B /* second@2x.png */,
 				E135422D158FF9500052465B /* Supporting Files */,
+				E134F0FB158FFC5F0088FEF2 /* VideoGridViewController.h */,
+				E134F0FC158FFC5F0088FEF2 /* VideoGridViewController.m */,
+				E134F0FE158FFCD40088FEF2 /* AFWordpressComClient.h */,
+				E134F0FF158FFCD40088FEF2 /* AFWordpressComClient.m */,
+				E134F101158FFDCF0088FEF2 /* Video.h */,
+				E134F102158FFDCF0088FEF2 /* Video.m */,
 			);
 			path = wptv;
 			sourceTree = "<group>";
@@ -125,6 +124,7 @@
 				E135421E158FF9500052465B /* Sources */,
 				E135421F158FF9500052465B /* Frameworks */,
 				E1354220158FF9500052465B /* Resources */,
+				9A815B4CFA7141E495C47363 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -168,14 +168,27 @@
 			files = (
 				E1354231158FF9500052465B /* InfoPlist.strings in Resources */,
 				E135423A158FF9500052465B /* MainStoryboard.storyboard in Resources */,
-				E135423F158FF9500052465B /* first.png in Resources */,
-				E1354241158FF9500052465B /* first@2x.png in Resources */,
-				E1354246158FF9500052465B /* second.png in Resources */,
-				E1354248158FF9500052465B /* second@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9A815B4CFA7141E495C47363 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E135421E158FF9500052465B /* Sources */ = {
@@ -184,8 +197,9 @@
 			files = (
 				E1354233158FF9500052465B /* main.m in Sources */,
 				E1354237158FF9500052465B /* AppDelegate.m in Sources */,
-				E135423D158FF9500052465B /* FirstViewController.m in Sources */,
-				E1354244158FF9500052465B /* SecondViewController.m in Sources */,
+				E134F0FD158FFC5F0088FEF2 /* VideoGridViewController.m in Sources */,
+				E134F100158FFCD40088FEF2 /* AFWordpressComClient.m in Sources */,
+				E134F103158FFDCF0088FEF2 /* Video.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,22 +274,30 @@
 		};
 		E135424C158FF9500052465B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5BFC2E345824D0597A11901 /* Pods.xcconfig */;
 			buildSettings = {
+				DSTROOT = /tmp/xcodeproj.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "wptv/wptv-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "wptv/wptv-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		E135424D158FF9500052465B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5BFC2E345824D0597A11901 /* Pods.xcconfig */;
 			buildSettings = {
+				DSTROOT = /tmp/xcodeproj.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "wptv/wptv-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "wptv/wptv-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -299,6 +321,7 @@
 				E135424D158FF9500052465B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

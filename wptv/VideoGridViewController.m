@@ -91,7 +91,8 @@
 
 - (void)gridView:(KKGridView *)gridView didSelectItemAtIndexPath:(KKIndexPath *)indexPath {
     Video *video = [_videos objectAtIndex:indexPath.index];
-    MPMoviePlayerViewController *mplayer = [[MPMoviePlayerViewController alloc] initWithContentURL:video.hdVideoURL];
+    MPMoviePlayerViewController *mplayer = [[MPMoviePlayerViewController alloc] initWithContentURL:video.videoURL];
+    NSLog(@"Loading video: %@", video.videoURL);
     mplayer.modalPresentationStyle = UIModalPresentationFullScreen;
     [self presentViewController:mplayer animated:YES completion:nil];
     [gridView deselectItemsAtIndexPaths:@[ indexPath ] animated:YES];

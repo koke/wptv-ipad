@@ -21,6 +21,8 @@
 @property (readonly) NSURL *hdVideoURL;
 @property (readonly) NSArray *categories;
 @property (readonly) NSArray *tags;
+// Return best available video url (some videos don't have an HD version)
+@property (readonly) NSURL *videoURL;
 
 
 - (id)initWithAttributes:(NSDictionary *)attributes;

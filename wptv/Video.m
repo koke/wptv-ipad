@@ -119,4 +119,14 @@ NSString * const ApiSiteID = @"wordpress.tv";
     return [NSString stringWithFormat:@"<Video: %p, ID: %d, Title: %@, URL: %@", self, self.postID, self.title, self.permalink];
 }
 
+#pragma mark - Custom accessors
+
+- (NSURL *)videoURL {
+    if (self.hdVideoURL) {
+        return self.hdVideoURL;
+    } else {
+        return self.sdVideoURL;
+    }
+}
+
 @end

@@ -34,4 +34,10 @@
 // Pagination:
 // - On refresh, add [after] with the last video date
 // - On scroll, add [before] with the last video date, [offset] with the count offset. Never ask for more than "found"
+
++ (void)latestVideosWithBlock:(void (^)(NSArray *videos))block;
++ (void)featuredVideosWithBlock:(void (^)(NSArray *videos))block;
++ (void)videosWithCategory:(NSString *)categorySlug block:(void (^)(NSArray *videos))block;
++ (void)videosWithSearchString:(NSString *)searchString block:(void (^)(NSArray *videos))block;
+
 @end

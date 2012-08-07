@@ -18,6 +18,7 @@
 		E1354233158FF9500052465B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E1354232158FF9500052465B /* main.m */; };
 		E1354237158FF9500052465B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1354236158FF9500052465B /* AppDelegate.m */; };
 		E135423A158FF9500052465B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1354238158FF9500052465B /* MainStoryboard.storyboard */; };
+		E1CC892A15D1187300DF3B60 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1CC892915D1187300DF3B60 /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		E1354235158FF9500052465B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E1354236158FF9500052465B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E1354239158FF9500052465B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		E1CC892915D1187300DF3B60 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1CC892A15D1187300DF3B60 /* MediaPlayer.framework in Frameworks */,
 				E1354227158FF9500052465B /* UIKit.framework in Frameworks */,
 				E1354229158FF9500052465B /* Foundation.framework in Frameworks */,
 				E135422B158FF9500052465B /* CoreGraphics.framework in Frameworks */,
@@ -78,6 +81,7 @@
 		E1354225158FF9500052465B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E1CC892915D1187300DF3B60 /* MediaPlayer.framework */,
 				E1354226158FF9500052465B /* UIKit.framework */,
 				E1354228158FF9500052465B /* Foundation.framework */,
 				E135422A158FF9500052465B /* CoreGraphics.framework */,

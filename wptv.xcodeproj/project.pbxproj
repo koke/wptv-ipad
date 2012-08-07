@@ -22,6 +22,7 @@
 		E1CC892F15D12F1600DF3B60 /* FeaturedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CC892E15D12F1600DF3B60 /* FeaturedViewController.m */; };
 		E1CC893215D1309400DF3B60 /* WordcampViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CC893115D1309400DF3B60 /* WordcampViewController.m */; };
 		E1CC893515D1312B00DF3B60 /* HowtoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CC893415D1312B00DF3B60 /* HowtoViewController.m */; };
+		E1CC893815D133F600DF3B60 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CC893715D133F600DF3B60 /* VideoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,8 @@
 		E1CC893115D1309400DF3B60 /* WordcampViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordcampViewController.m; sourceTree = "<group>"; };
 		E1CC893315D1312B00DF3B60 /* HowtoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HowtoViewController.h; sourceTree = "<group>"; };
 		E1CC893415D1312B00DF3B60 /* HowtoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HowtoViewController.m; sourceTree = "<group>"; };
+		E1CC893615D133F600DF3B60 /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
+		E1CC893715D133F600DF3B60 /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +140,8 @@
 				E1CC893115D1309400DF3B60 /* WordcampViewController.m */,
 				E1CC893315D1312B00DF3B60 /* HowtoViewController.h */,
 				E1CC893415D1312B00DF3B60 /* HowtoViewController.m */,
+				E1CC893615D133F600DF3B60 /* VideoViewController.h */,
+				E1CC893715D133F600DF3B60 /* VideoViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -230,6 +235,7 @@
 				E1CC892F15D12F1600DF3B60 /* FeaturedViewController.m in Sources */,
 				E1CC893215D1309400DF3B60 /* WordcampViewController.m in Sources */,
 				E1CC893515D1312B00DF3B60 /* HowtoViewController.m in Sources */,
+				E1CC893815D133F600DF3B60 /* VideoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

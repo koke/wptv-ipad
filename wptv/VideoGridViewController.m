@@ -9,7 +9,7 @@
 #import <MediaPlayer/MediaPlayer.h>
 
 #import "VideoGridViewController.h"
-
+#import "VideoViewController.h"
 #import "Video.h"
 
 #import "UIImageView+AFNetworking.h"
@@ -45,6 +45,13 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return YES;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showVideo"] && [sender isKindOfClass:[Video class]] && [segue.destinationViewController isKindOfClass:[VideoViewController class]]) {
+        VideoViewController *videoViewController = (VideoViewController *)segue.destinationViewController;
+        videoViewController.video = (Video *)sender;
+    }
 }
 
 #pragma mark - Custom methods
@@ -96,10 +103,7 @@
 
 - (void)gridView:(KKGridView *)gridView didSelectItemAtIndexPath:(KKIndexPath *)indexPath {
     Video *video = [_videos objectAtIndex:indexPath.index];
-    MPMoviePlayerViewController *mplayer = [[MPMoviePlayerViewController alloc] initWithContentURL:video.videoURL];
-    NSLog(@"Loading video: %@", video.videoURL);
-    mplayer.modalPresentationStyle = UIModalPresentationFullScreen;
-    [self presentViewController:mplayer animated:YES completion:nil];
+    [self performSegueWithIdentifier:@"showVideo" sender:video];
     [gridView deselectItemsAtIndexPaths:@[ indexPath ] animated:YES];
 }
 

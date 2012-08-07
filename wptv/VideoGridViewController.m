@@ -16,6 +16,7 @@
 
 @interface VideoGridViewController ()
 - (void)reload:(id)sender;
+- (NSDictionary *)videoQuery;
 @end
 
 @implementation VideoGridViewController {
@@ -49,13 +50,17 @@
 #pragma mark - Custom methods
 
 - (void)reload:(id)sender {
-    [Video latestVideosWithBlock:^(NSArray *videos) {
+    [Video videosWithQuery:[self videoQuery] block:^(NSArray *videos) {
         if (videos) {
             _videos = videos;
             NSLog(@"loaded %d videos", [videos count]);
             [self.gridView reloadData];
         }
     }];
+}
+
+- (NSDictionary *)videoQuery {
+    return nil;
 }
 
 #pragma mark - KKGRidViewDataSource

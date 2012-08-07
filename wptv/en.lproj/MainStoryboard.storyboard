@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11E53" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2549" systemVersion="12A269" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="4">
     <dependencies>
         <deployment defaultVersion="1296" identifier="iOS"/>
-        <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1498"/>
     </dependencies>
     <scenes>
         <!--Tab Bar Controller-->
@@ -20,6 +19,10 @@
                     <connections>
                         <segue destination="zzI-Rg-2sz" kind="relationship" relationship="viewControllers" id="wcy-EN-vGv"/>
                         <segue destination="CQu-70-uY1" kind="relationship" relationship="viewControllers" id="h7N-v1-dT8"/>
+                        <segue destination="pa0-Zx-uvZ" kind="relationship" relationship="viewControllers" id="i0l-CU-vpo"/>
+                        <segue destination="7ki-vF-iIb" kind="relationship" relationship="viewControllers" id="dW7-PE-Yos"/>
+                        <segue destination="KPq-Lw-Vna" kind="relationship" relationship="viewControllers" id="w6i-xm-TKC"/>
+                        <segue destination="r5E-8i-hBh" kind="relationship" relationship="viewControllers" id="HRh-1t-EK3"/>
                     </connections>
                 </tabBarController>
             </objects>
@@ -39,7 +42,7 @@
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="2401" y="119"/>
+            <point key="canvasLocation" x="2513" y="-1719"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UoN-MJ-PxG">
@@ -55,13 +58,13 @@
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="2401" y="1265"/>
+            <point key="canvasLocation" x="2513" y="-573"/>
         </scene>
-        <!--Video Grid View Controller-->
+        <!--Featured View Controller - Featured-->
         <scene sceneID="toE-km-Lx1">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="46C-1r-0xX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController storyboardIdentifier="" id="MIN-fw-Z3X" customClass="VideoGridViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="" title="Featured" id="MIN-fw-Z3X" customClass="FeaturedViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wNA-CE-jUh">
                         <rect key="frame" x="0.0" y="64" width="768" height="911"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -70,13 +73,13 @@
                     <navigationItem key="navigationItem" id="Nrq-jQ-Eti"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="3427" y="119"/>
+            <point key="canvasLocation" x="3539" y="-1719"/>
         </scene>
-        <!--Video Grid View Controller-->
+        <!--Video Grid View Controller - Latest Videos-->
         <scene sceneID="5ZB-jg-ibt">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tpm-rX-mYf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController storyboardIdentifier="" id="SuT-lN-Wxc" customClass="VideoGridViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="" title="Latest Videos" id="SuT-lN-Wxc" customClass="VideoGridViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VLC-yG-xxr">
                         <rect key="frame" x="0.0" y="64" width="768" height="911"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -85,15 +88,148 @@
                     <navigationItem key="navigationItem" id="WYm-2c-ivc"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="3427" y="1265"/>
+            <point key="canvasLocation" x="3539" y="-573"/>
+        </scene>
+        <!--Wordcamp View Controller - WordCampTV-->
+        <scene sceneID="uRL-Rg-l7b">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MD4-yB-t4B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController title="WordCampTV" id="zHD-W5-LR9" customClass="WordcampViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d5q-jL-D73">
+                        <rect key="frame" x="0.0" y="64" width="768" height="911"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="x4w-0g-Bzu"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="3539" y="570"/>
+        </scene>
+        <!--Howto View Controller - How To-->
+        <scene sceneID="qOb-nn-H5b">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MFX-da-THJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController title="How To" id="kWf-tK-QC4" customClass="HowtoViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ank-RS-o71">
+                        <rect key="frame" x="0.0" y="64" width="768" height="911"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="72P-j5-iF6"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="3527" y="1706"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Efh-fT-AGf">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bFN-9L-dYE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController definesPresentationContext="YES" id="r5E-8i-hBh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="downloads" id="afP-cu-QRc"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VF6-8u-Tk6">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="j5F-Qp-0c3" kind="relationship" relationship="rootViewController" id="Ogg-FD-umC"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="2513" y="3994"/>
+        </scene>
+        <!--Video Grid View Controller - Saved Videos-->
+        <scene sceneID="HF7-S3-dqq">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q4m-dl-r7V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController title="Saved Videos" id="j5F-Qp-0c3" customClass="VideoGridViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wmd-da-xkJ">
+                        <rect key="frame" x="0.0" y="64" width="768" height="911"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="oKs-1e-zYA"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="3507" y="3990"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dzd-sc-q75">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tam-O0-Uga" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController definesPresentationContext="YES" id="KPq-Lw-Vna" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="search" id="dkD-D9-SRF"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fcW-89-k36">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="cLm-HX-2bl" kind="relationship" relationship="rootViewController" id="ba8-06-xY8"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="2510" y="2842"/>
+        </scene>
+        <!--Video Grid View Controller - Search-->
+        <scene sceneID="1cY-me-gOb">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gIG-Jl-oij" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController title="Search" id="cLm-HX-2bl" customClass="VideoGridViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H1B-Iv-Jai">
+                        <rect key="frame" x="0.0" y="64" width="768" height="911"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="osc-YZ-bL5"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="3519" y="2846"/>
+        </scene>
+        <!--Navigation Controller - How To-->
+        <scene sceneID="LBn-VA-5NY">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z9R-Ws-d6S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController definesPresentationContext="YES" id="7ki-vF-iIb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="How To" id="EAp-dt-9hg"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xmJ-ps-jGP">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="kWf-tK-QC4" kind="relationship" relationship="rootViewController" id="Tnm-PY-UUf"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="2513" y="1702"/>
+        </scene>
+        <!--Navigation Controller - WordCamp.TV-->
+        <scene sceneID="x3i-c2-JB2">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NpV-Jb-n6c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController definesPresentationContext="YES" id="pa0-Zx-uvZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="WordCamp.TV" id="7fL-j2-iJP"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="t5w-3g-0Bb">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="zHD-W5-LR9" kind="relationship" relationship="rootViewController" id="P7y-3U-7dN"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="2513" y="562"/>
         </scene>
     </scenes>
     <classes>
+        <class className="FeaturedViewController" superclassName="VideoGridViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FeaturedViewController.h"/>
+        </class>
+        <class className="HowtoViewController" superclassName="VideoGridViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HowtoViewController.h"/>
+        </class>
         <class className="KKGridViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/KKGridViewController.h"/>
         </class>
         <class className="VideoGridViewController" superclassName="KKGridViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/VideoGridViewController.h"/>
+        </class>
+        <class className="WordcampViewController" superclassName="VideoGridViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WordcampViewController.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

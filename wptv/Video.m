@@ -13,7 +13,6 @@
 NSString * const ApiSiteID = @"wordpress.tv";
 
 @interface Video ()
-+ (void)videosWithQuery:(NSDictionary *)query block:(void (^)(NSArray *videos))block;
 @end
 
 @implementation Video
@@ -86,6 +85,7 @@ NSString * const ApiSiteID = @"wordpress.tv";
 }
 
 + (void)videosWithQuery:(NSDictionary *)query block:(void (^)(NSArray *))block {
+    NSLog(@"Query: %@", query);
     NSString *path = [NSString stringWithFormat:@"sites/%@/posts/", ApiSiteID];
     NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithObject:@24 forKey:@"number"];
     [parameters addEntriesFromDictionary:query];

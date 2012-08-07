@@ -41,5 +41,6 @@
 + (void)featuredVideosWithBlock:(void (^)(NSArray *videos))block;
 + (void)videosWithCategory:(NSString *)categorySlug block:(void (^)(NSArray *videos))block;
 + (void)videosWithSearchString:(NSString *)searchString block:(void (^)(NSArray *videos))block;
++ (void)videosWithQuery:(NSDictionary *)query block:(void (^)(NSArray *videos))block;
 
 @end

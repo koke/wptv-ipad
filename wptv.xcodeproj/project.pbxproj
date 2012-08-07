@@ -19,6 +19,9 @@
 		E1354237158FF9500052465B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1354236158FF9500052465B /* AppDelegate.m */; };
 		E135423A158FF9500052465B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1354238158FF9500052465B /* MainStoryboard.storyboard */; };
 		E1CC892A15D1187300DF3B60 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1CC892915D1187300DF3B60 /* MediaPlayer.framework */; };
+		E1CC892F15D12F1600DF3B60 /* FeaturedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CC892E15D12F1600DF3B60 /* FeaturedViewController.m */; };
+		E1CC893215D1309400DF3B60 /* WordcampViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CC893115D1309400DF3B60 /* WordcampViewController.m */; };
+		E1CC893515D1312B00DF3B60 /* HowtoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CC893415D1312B00DF3B60 /* HowtoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,12 @@
 		E1354236158FF9500052465B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E1354239158FF9500052465B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		E1CC892915D1187300DF3B60 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		E1CC892D15D12F1600DF3B60 /* FeaturedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeaturedViewController.h; sourceTree = "<group>"; };
+		E1CC892E15D12F1600DF3B60 /* FeaturedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeaturedViewController.m; sourceTree = "<group>"; };
+		E1CC893015D1309400DF3B60 /* WordcampViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordcampViewController.h; sourceTree = "<group>"; };
+		E1CC893115D1309400DF3B60 /* WordcampViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordcampViewController.m; sourceTree = "<group>"; };
+		E1CC893315D1312B00DF3B60 /* HowtoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HowtoViewController.h; sourceTree = "<group>"; };
+		E1CC893415D1312B00DF3B60 /* HowtoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HowtoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +106,7 @@
 				E1354236158FF9500052465B /* AppDelegate.m */,
 				E1354238158FF9500052465B /* MainStoryboard.storyboard */,
 				E135422D158FF9500052465B /* Supporting Files */,
-				E134F0FB158FFC5F0088FEF2 /* VideoGridViewController.h */,
-				E134F0FC158FFC5F0088FEF2 /* VideoGridViewController.m */,
+				E1CC892C15D12EDF00DF3B60 /* Controllers */,
 				E134F0FE158FFCD40088FEF2 /* AFWordpressComClient.h */,
 				E134F0FF158FFCD40088FEF2 /* AFWordpressComClient.m */,
 				E134F101158FFDCF0088FEF2 /* Video.h */,
@@ -116,6 +124,21 @@
 				E1354234158FF9500052465B /* wptv-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E1CC892C15D12EDF00DF3B60 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E134F0FB158FFC5F0088FEF2 /* VideoGridViewController.h */,
+				E134F0FC158FFC5F0088FEF2 /* VideoGridViewController.m */,
+				E1CC892D15D12F1600DF3B60 /* FeaturedViewController.h */,
+				E1CC892E15D12F1600DF3B60 /* FeaturedViewController.m */,
+				E1CC893015D1309400DF3B60 /* WordcampViewController.h */,
+				E1CC893115D1309400DF3B60 /* WordcampViewController.m */,
+				E1CC893315D1312B00DF3B60 /* HowtoViewController.h */,
+				E1CC893415D1312B00DF3B60 /* HowtoViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +227,9 @@
 				E134F0FD158FFC5F0088FEF2 /* VideoGridViewController.m in Sources */,
 				E134F100158FFCD40088FEF2 /* AFWordpressComClient.m in Sources */,
 				E134F103158FFDCF0088FEF2 /* Video.m in Sources */,
+				E1CC892F15D12F1600DF3B60 /* FeaturedViewController.m in Sources */,
+				E1CC893215D1309400DF3B60 /* WordcampViewController.m in Sources */,
+				E1CC893515D1312B00DF3B60 /* HowtoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

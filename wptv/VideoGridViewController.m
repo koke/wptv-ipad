@@ -14,14 +14,23 @@
 
 #import "UIImageView+AFNetworking.h"
 
+NSIndexPath *NSIndexPathFromKKIndexPath(KKIndexPath *indexPath) {
+    return [NSIndexPath indexPathForRow:indexPath.index inSection:indexPath.section];
+}
+
+KKIndexPath *KKIndexPathFromNSIndexPath(NSIndexPath *indexPath) {
+    return [KKIndexPath indexPathForIndex:indexPath.row inSection:indexPath.section];
+}
+
 @interface VideoGridViewController ()
+@property (nonatomic,strong) NSFetchedResultsController *resultsController;
+@property (nonatomic,strong) UIBarButtonItem *reloadButton;
 - (void)reload:(id)sender;
 - (NSDictionary *)videoQuery;
 @end
 
-@implementation VideoGridViewController {
-    NSArray *_videos;
-}
+@implementation VideoGridViewController
+@synthesize resultsController = _resultsController;
 
 - (void)loadView {
     [super loadView];
@@ -33,6 +42,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.reloadButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(reload:)];
+    self.navigationItem.leftBarButtonItem = self.reloadButton;
     [self reload:nil];
 }
 
@@ -57,12 +68,12 @@
 #pragma mark - Custom methods
 
 - (void)reload:(id)sender {
+    self.reloadButton.enabled = NO;
     [Video videosWithQuery:[self videoQuery] block:^(NSArray *videos) {
         if (videos) {
-            _videos = videos;
             NSLog(@"loaded %d videos", [videos count]);
-            [self.gridView reloadData];
         }
+        self.reloadButton.enabled = YES;
     }];
 }
 
@@ -72,12 +83,17 @@
 
 #pragma mark - KKGRidViewDataSource
 
+- (NSUInteger)numberOfSectionsInGridView:(KKGridView *)gridView {
+    return [[self.resultsController sections] count];
+}
+
 - (NSUInteger)gridView:(KKGridView *)gridView numberOfItemsInSection:(NSUInteger)section {
-    return [_videos count];
+    id<NSFetchedResultsSectionInfo> sectionInfo = [[self.resultsController sections] objectAtIndex:0];
+    return [sectionInfo numberOfObjects];
 }
 
 - (KKGridViewCell *)gridView:(KKGridView *)gridView cellForItemAtIndexPath:(KKIndexPath *)indexPath {
-    Video *video = [_videos objectAtIndex:indexPath.index];
+    Video *video = [self.resultsController objectAtIndexPath:NSIndexPathFromKKIndexPath(indexPath)];
     KKGridViewCell *cell = [KKGridViewCell cellForGridView:gridView];
     cell.backgroundColor = [UIColor redColor];
     UIImageView *thumbnailView = [[UIImageView alloc] initWithFrame:cell.bounds];
@@ -93,7 +109,11 @@
     titleLabel.numberOfLines = 2;
     titleLabel.textColor = [UIColor whiteColor];
     titleLabel.font = [UIFont systemFontOfSize:12.0f];
-    titleLabel.text = [NSString stringWithFormat:@"%@\n%@", video.speaker, video.title];
+    if (video.speaker) {
+        titleLabel.text = [NSString stringWithFormat:@"%@\n%@", video.speaker, video.title];
+    } else {
+        titleLabel.text = [NSString stringWithFormat:@"%@", video.title];
+    }
     [cell.contentView addSubview:titleLabel];
 
     return cell;
@@ -102,9 +122,87 @@
 #pragma mark - KKGridViewDelegate
 
 - (void)gridView:(KKGridView *)gridView didSelectItemAtIndexPath:(KKIndexPath *)indexPath {
-    Video *video = [_videos objectAtIndex:indexPath.index];
+    Video *video = [self.resultsController objectAtIndexPath:NSIndexPathFromKKIndexPath(indexPath)];
     [self performSegueWithIdentifier:@"showVideo" sender:video];
     [gridView deselectItemsAtIndexPaths:@[ indexPath ] animated:YES];
 }
 
+#pragma mark - Fetched results controller
+
+- (NSFetchRequest *)fetchRequest {
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Video"];
+    [fetchRequest setSortDescriptors:@[ [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:NO] ]];
+
+    return fetchRequest;
+}
+
+- (NSFetchedResultsController *)resultsController {
+    if (_resultsController != nil) {
+        return _resultsController;
+    }
+    
+    id appDelegate = (id)[[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *moc = [appDelegate managedObjectContext];
+
+    _resultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:[self fetchRequest]
+                                                             managedObjectContext:moc
+                                                               sectionNameKeyPath:nil
+                                                                        cacheName:nil];
+    _resultsController.delegate = self;
+    
+    NSError *error = nil;
+    if (![_resultsController performFetch:&error]) {
+        NSLog(@"%@ couldn't fetch videos: %@", self, [error localizedDescription]);
+        _resultsController = nil;
+    }
+    
+    return _resultsController;
+}
+
+- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
+    [self.gridView beginUpdates];
+}
+
+- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
+    [self.gridView endUpdates];
+    [self.gridView reloadData];
+}
+
+/*
+- (void)controller:(NSFetchedResultsController *)controller
+   didChangeObject:(id)anObject
+       atIndexPath:(NSIndexPath *)indexPath
+     forChangeType:(NSFetchedResultsChangeType)type
+      newIndexPath:(NSIndexPath *)newIndexPath {
+    
+    if (NSFetchedResultsChangeUpdate == type && newIndexPath && ![newIndexPath isEqual:indexPath]) {
+        // Seriously, Apple?
+        // http://developer.apple.com/library/ios/#releasenotes/iPhone/NSFetchedResultsChangeMoveReportedAsNSFetchedResultsChangeUpdate/_index.html
+        type = NSFetchedResultsChangeMove;
+    }
+    if (newIndexPath == nil) {
+        // It seems in some cases newIndexPath can be nil for updates
+        newIndexPath = indexPath;
+    }
+    
+    switch(type) {
+        case NSFetchedResultsChangeInsert:
+            [self.gridView insertItemsAtIndexPaths:@[ KKIndexPathFromNSIndexPath(newIndexPath) ] withAnimation:KKGridViewAnimationFade];
+            break;
+            
+        case NSFetchedResultsChangeDelete:
+            [self.gridView deleteItemsAtIndexPaths:@[ KKIndexPathFromNSIndexPath(indexPath) ] withAnimation:KKGridViewAnimationFade];
+            break;
+            
+        case NSFetchedResultsChangeUpdate:
+            [self.gridView reloadItemsAtIndexPaths:@[ KKIndexPathFromNSIndexPath(indexPath) ]];
+            break;
+            
+        case NSFetchedResultsChangeMove:
+            [self.gridView deleteItemsAtIndexPaths:@[ KKIndexPathFromNSIndexPath(indexPath) ] withAnimation:KKGridViewAnimationFade];
+            [self.gridView insertItemsAtIndexPaths:@[ KKIndexPathFromNSIndexPath(newIndexPath) ] withAnimation:KKGridViewAnimationFade];
+            break;
+    }
+}
+*/
 @end

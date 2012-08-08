@@ -18,4 +18,10 @@
     return @{ @"category" : @"how-to" };
 }
 
+- (NSFetchRequest *)fetchRequest {
+    NSFetchRequest *fetchRequest = [super fetchRequest];
+    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"ANY(categories.slug) LIKE %@", @"how-to"]];
+    return fetchRequest;
+}
+
 @end

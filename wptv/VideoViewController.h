@@ -13,4 +13,10 @@
 @property (nonatomic, strong) Video *video;
 @property (strong) IBOutlet UIView *videoView;
 @property (strong) IBOutlet UILabel *titleLabel;
+@property (strong) IBOutlet UIButton *likeButton;
+@property (strong) IBOutlet UIButton *shareButton;
+@property (strong) IBOutlet UIButton *saveButton;
+
+- (IBAction)save:(id)sender;
+
 @end

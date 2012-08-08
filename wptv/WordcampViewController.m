@@ -18,4 +18,10 @@
     return @{ @"category" : @"wordcamptv" };
 }
 
+- (NSFetchRequest *)fetchRequest {
+    NSFetchRequest *fetchRequest = [super fetchRequest];
+    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"ANY(categories.slug) LIKE %@", @"wordcamptv"]];
+    return fetchRequest;
+}
+
 @end

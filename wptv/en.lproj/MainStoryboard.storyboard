@@ -156,9 +156,15 @@
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="disabled" title="Saved">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="save:" destination="TUD-Na-HFT" eventType="touchUpInside" id="Had-3q-bUR"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ZmP-Pm-RHw">
                                 <rect key="frame" x="596" y="464" width="72" height="37"/>
@@ -194,6 +200,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="wgH-kC-K4b"/>
                     <connections>
+                        <outlet property="likeButton" destination="tPI-7C-dad" id="pkW-TU-XPs"/>
+                        <outlet property="saveButton" destination="eld-bp-IH7" id="LMZ-5g-ORF"/>
+                        <outlet property="shareButton" destination="ZmP-Pm-RHw" id="2ub-6f-l8c"/>
                         <outlet property="titleLabel" destination="Lgl-1a-6jX" id="7sc-E4-hbs"/>
                         <outlet property="videoView" destination="L9R-Xb-H5l" id="pnd-PC-bE9"/>
                     </connections>
@@ -217,11 +226,11 @@
             </objects>
             <point key="canvasLocation" x="2513" y="3994"/>
         </scene>
-        <!--Video Grid View Controller - Saved Videos-->
+        <!--Downloads View Controller - Saved Videos-->
         <scene sceneID="HF7-S3-dqq">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q4m-dl-r7V" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController title="Saved Videos" id="j5F-Qp-0c3" customClass="VideoGridViewController" sceneMemberID="viewController">
+                <viewController title="Saved Videos" id="j5F-Qp-0c3" customClass="DownloadsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wmd-da-xkJ">
                         <rect key="frame" x="0.0" y="64" width="768" height="911"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -303,6 +312,9 @@
         </scene>
     </scenes>
     <classes>
+        <class className="DownloadsViewController" superclassName="VideoGridViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DownloadsViewController.h"/>
+        </class>
         <class className="FeaturedViewController" superclassName="VideoGridViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FeaturedViewController.h"/>
         </class>
@@ -318,6 +330,10 @@
         <class className="VideoViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/VideoViewController.h"/>
             <relationships>
+                <relationship kind="action" name="save:"/>
+                <relationship kind="outlet" name="likeButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="saveButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="shareButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="videoView" candidateClass="UIView"/>
             </relationships>

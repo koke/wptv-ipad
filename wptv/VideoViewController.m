@@ -30,12 +30,19 @@
 
 - (void)setVideo:(Video *)video {
     _video = video;
+    [self updateVideoDetails];
 }
 
 - (void)updateVideoDetails {
     self.title = self.video.title;
     self.titleLabel.text = self.video.title;
-    self.mplayer = [[MPMoviePlayerController alloc] initWithContentURL:self.video.videoURL];
+    self.saveButton.enabled = !self.video.saved;
+    self.saveButton.enabled = !self.video.saved;
+    NSURL *videoURL = self.video.videoURL;
+    if (self.video.isDownloaded) {
+        videoURL = self.video.localURL;
+    }
+    self.mplayer = [[MPMoviePlayerController alloc] initWithContentURL:videoURL];
     self.mplayer.shouldAutoplay = NO;
     [self.mplayer prepareToPlay];
     if (self.videoView) {
@@ -44,6 +51,12 @@
     }
     [self.view addSubview:self.mplayer.view];
     self.videoView = self.mplayer.view;
+}
+
+#pragma mark - Actions
+
+- (IBAction)save:(id)sender {
+    self.video.saved = YES;
 }
 
 @end

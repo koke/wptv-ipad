@@ -10,7 +10,6 @@
 		79C39217CFCE4501BBFD7011 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2B7A059F4ED43C99478D51B /* libPods.a */; };
 		E134F0FD158FFC5F0088FEF2 /* VideoGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E134F0FC158FFC5F0088FEF2 /* VideoGridViewController.m */; };
 		E134F100158FFCD40088FEF2 /* AFWordpressComClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E134F0FF158FFCD40088FEF2 /* AFWordpressComClient.m */; };
-		E134F103158FFDCF0088FEF2 /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = E134F102158FFDCF0088FEF2 /* Video.m */; };
 		E1354227158FF9500052465B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1354226158FF9500052465B /* UIKit.framework */; };
 		E1354229158FF9500052465B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1354228158FF9500052465B /* Foundation.framework */; };
 		E135422B158FF9500052465B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E135422A158FF9500052465B /* CoreGraphics.framework */; };
@@ -18,11 +17,18 @@
 		E1354233158FF9500052465B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E1354232158FF9500052465B /* main.m */; };
 		E1354237158FF9500052465B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1354236158FF9500052465B /* AppDelegate.m */; };
 		E135423A158FF9500052465B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1354238158FF9500052465B /* MainStoryboard.storyboard */; };
+		E184B6B115D16700003EBED5 /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = E184B6B015D16700003EBED5 /* Video.m */; };
+		E184B6B415D168B7003EBED5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E184B6B315D168B7003EBED5 /* CoreData.framework */; };
+		E184B6B715D168CD003EBED5 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = E184B6B615D168CD003EBED5 /* Category.m */; };
+		E184B6C115D168F8003EBED5 /* Tag.m in Sources */ = {isa = PBXBuildFile; fileRef = E184B6C015D168F8003EBED5 /* Tag.m */; };
+		E184B6CA15D1935A003EBED5 /* ISO8601DateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = E184B6C915D1935A003EBED5 /* ISO8601DateFormatter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E184B6CD15D1E317003EBED5 /* DownloadsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E184B6CC15D1E317003EBED5 /* DownloadsViewController.m */; };
 		E1CC892A15D1187300DF3B60 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1CC892915D1187300DF3B60 /* MediaPlayer.framework */; };
 		E1CC892F15D12F1600DF3B60 /* FeaturedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CC892E15D12F1600DF3B60 /* FeaturedViewController.m */; };
 		E1CC893215D1309400DF3B60 /* WordcampViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CC893115D1309400DF3B60 /* WordcampViewController.m */; };
 		E1CC893515D1312B00DF3B60 /* HowtoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CC893415D1312B00DF3B60 /* HowtoViewController.m */; };
 		E1CC893815D133F600DF3B60 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CC893715D133F600DF3B60 /* VideoViewController.m */; };
+		E1CC893B15D1629800DF3B60 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E1CC893915D1629800DF3B60 /* Model.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,8 +38,6 @@
 		E134F0FC158FFC5F0088FEF2 /* VideoGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoGridViewController.m; sourceTree = "<group>"; };
 		E134F0FE158FFCD40088FEF2 /* AFWordpressComClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFWordpressComClient.h; sourceTree = "<group>"; };
 		E134F0FF158FFCD40088FEF2 /* AFWordpressComClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFWordpressComClient.m; sourceTree = "<group>"; };
-		E134F101158FFDCF0088FEF2 /* Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Video.h; sourceTree = "<group>"; };
-		E134F102158FFDCF0088FEF2 /* Video.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Video.m; sourceTree = "<group>"; };
 		E1354222158FF9500052465B /* wptv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wptv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1354226158FF9500052465B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E1354228158FF9500052465B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -45,6 +49,17 @@
 		E1354235158FF9500052465B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E1354236158FF9500052465B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E1354239158FF9500052465B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		E184B6AF15D16700003EBED5 /* Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Video.h; sourceTree = "<group>"; };
+		E184B6B015D16700003EBED5 /* Video.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Video.m; sourceTree = "<group>"; };
+		E184B6B315D168B7003EBED5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		E184B6B515D168CD003EBED5 /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
+		E184B6B615D168CD003EBED5 /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Category.m; sourceTree = "<group>"; };
+		E184B6BF15D168F8003EBED5 /* Tag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tag.h; sourceTree = "<group>"; };
+		E184B6C015D168F8003EBED5 /* Tag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tag.m; sourceTree = "<group>"; };
+		E184B6C815D1935A003EBED5 /* ISO8601DateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISO8601DateFormatter.h; sourceTree = "<group>"; };
+		E184B6C915D1935A003EBED5 /* ISO8601DateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISO8601DateFormatter.m; sourceTree = "<group>"; };
+		E184B6CB15D1E317003EBED5 /* DownloadsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadsViewController.h; sourceTree = "<group>"; };
+		E184B6CC15D1E317003EBED5 /* DownloadsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadsViewController.m; sourceTree = "<group>"; };
 		E1CC892915D1187300DF3B60 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		E1CC892D15D12F1600DF3B60 /* FeaturedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeaturedViewController.h; sourceTree = "<group>"; };
 		E1CC892E15D12F1600DF3B60 /* FeaturedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeaturedViewController.m; sourceTree = "<group>"; };
@@ -54,6 +69,7 @@
 		E1CC893415D1312B00DF3B60 /* HowtoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HowtoViewController.m; sourceTree = "<group>"; };
 		E1CC893615D133F600DF3B60 /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
 		E1CC893715D133F600DF3B60 /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
+		E1CC893A15D1629800DF3B60 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E184B6B415D168B7003EBED5 /* CoreData.framework in Frameworks */,
 				E1CC892A15D1187300DF3B60 /* MediaPlayer.framework in Frameworks */,
 				E1354227158FF9500052465B /* UIKit.framework in Frameworks */,
 				E1354229158FF9500052465B /* Foundation.framework in Frameworks */,
@@ -93,6 +110,7 @@
 		E1354225158FF9500052465B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E184B6B315D168B7003EBED5 /* CoreData.framework */,
 				E1CC892915D1187300DF3B60 /* MediaPlayer.framework */,
 				E1354226158FF9500052465B /* UIKit.framework */,
 				E1354228158FF9500052465B /* Foundation.framework */,
@@ -105,15 +123,15 @@
 		E135422C158FF9500052465B /* wptv */ = {
 			isa = PBXGroup;
 			children = (
+				E184B6C815D1935A003EBED5 /* ISO8601DateFormatter.h */,
+				E184B6C915D1935A003EBED5 /* ISO8601DateFormatter.m */,
 				E1354235158FF9500052465B /* AppDelegate.h */,
 				E1354236158FF9500052465B /* AppDelegate.m */,
 				E1354238158FF9500052465B /* MainStoryboard.storyboard */,
-				E135422D158FF9500052465B /* Supporting Files */,
+				E184B6C215D168FD003EBED5 /* Models */,
 				E1CC892C15D12EDF00DF3B60 /* Controllers */,
-				E134F0FE158FFCD40088FEF2 /* AFWordpressComClient.h */,
-				E134F0FF158FFCD40088FEF2 /* AFWordpressComClient.m */,
-				E134F101158FFDCF0088FEF2 /* Video.h */,
-				E134F102158FFDCF0088FEF2 /* Video.m */,
+				E184B6C315D16914003EBED5 /* API */,
+				E135422D158FF9500052465B /* Supporting Files */,
 			);
 			path = wptv;
 			sourceTree = "<group>";
@@ -121,12 +139,35 @@
 		E135422D158FF9500052465B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E1CC893915D1629800DF3B60 /* Model.xcdatamodeld */,
 				E135422E158FF9500052465B /* wptv-Info.plist */,
 				E135422F158FF9500052465B /* InfoPlist.strings */,
 				E1354232158FF9500052465B /* main.m */,
 				E1354234158FF9500052465B /* wptv-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E184B6C215D168FD003EBED5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E184B6BF15D168F8003EBED5 /* Tag.h */,
+				E184B6C015D168F8003EBED5 /* Tag.m */,
+				E184B6B515D168CD003EBED5 /* Category.h */,
+				E184B6B615D168CD003EBED5 /* Category.m */,
+				E184B6AF15D16700003EBED5 /* Video.h */,
+				E184B6B015D16700003EBED5 /* Video.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		E184B6C315D16914003EBED5 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				E134F0FE158FFCD40088FEF2 /* AFWordpressComClient.h */,
+				E134F0FF158FFCD40088FEF2 /* AFWordpressComClient.m */,
+			);
+			name = API;
 			sourceTree = "<group>";
 		};
 		E1CC892C15D12EDF00DF3B60 /* Controllers */ = {
@@ -140,6 +181,8 @@
 				E1CC893115D1309400DF3B60 /* WordcampViewController.m */,
 				E1CC893315D1312B00DF3B60 /* HowtoViewController.h */,
 				E1CC893415D1312B00DF3B60 /* HowtoViewController.m */,
+				E184B6CB15D1E317003EBED5 /* DownloadsViewController.h */,
+				E184B6CC15D1E317003EBED5 /* DownloadsViewController.m */,
 				E1CC893615D133F600DF3B60 /* VideoViewController.h */,
 				E1CC893715D133F600DF3B60 /* VideoViewController.m */,
 			);
@@ -231,11 +274,16 @@
 				E1354237158FF9500052465B /* AppDelegate.m in Sources */,
 				E134F0FD158FFC5F0088FEF2 /* VideoGridViewController.m in Sources */,
 				E134F100158FFCD40088FEF2 /* AFWordpressComClient.m in Sources */,
-				E134F103158FFDCF0088FEF2 /* Video.m in Sources */,
 				E1CC892F15D12F1600DF3B60 /* FeaturedViewController.m in Sources */,
 				E1CC893215D1309400DF3B60 /* WordcampViewController.m in Sources */,
 				E1CC893515D1312B00DF3B60 /* HowtoViewController.m in Sources */,
 				E1CC893815D133F600DF3B60 /* VideoViewController.m in Sources */,
+				E1CC893B15D1629800DF3B60 /* Model.xcdatamodeld in Sources */,
+				E184B6B115D16700003EBED5 /* Video.m in Sources */,
+				E184B6B715D168CD003EBED5 /* Category.m in Sources */,
+				E184B6C115D168F8003EBED5 /* Tag.m in Sources */,
+				E184B6CA15D1935A003EBED5 /* ISO8601DateFormatter.m in Sources */,
+				E184B6CD15D1E317003EBED5 /* DownloadsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +408,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E1CC893915D1629800DF3B60 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E1CC893A15D1629800DF3B60 /* Model.xcdatamodel */,
+			);
+			currentVersion = E1CC893A15D1629800DF3B60 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E1354219158FF9500052465B /* Project object */;
 }

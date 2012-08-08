@@ -7,7 +7,9 @@
 //
 
 #import "KKGridViewController.h"
+#import <CoreData/CoreData.h>
 
-@interface VideoGridViewController : KKGridViewController
-
+@interface VideoGridViewController : KKGridViewController <NSFetchedResultsControllerDelegate>
+// FIXME: move to subclass .h
+- (NSFetchRequest *)fetchRequest;
 @end

@@ -19,4 +19,10 @@
     return @{ @"tag" : @"featured" };
 }
 
+- (NSFetchRequest *)fetchRequest {
+    NSFetchRequest *fetchRequest = [super fetchRequest];
+    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"ANY(tags.slug) LIKE %@", @"featured"]];
+    return fetchRequest;
+}
+
 @end

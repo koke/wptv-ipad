@@ -10,6 +10,4 @@
 #import <CoreData/CoreData.h>
 
 @interface VideoGridViewController : KKGridViewController <NSFetchedResultsControllerDelegate>
-// FIXME: move to subclass .h
-- (NSFetchRequest *)fetchRequest;
 @end

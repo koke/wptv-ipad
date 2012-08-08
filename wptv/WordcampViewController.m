@@ -7,6 +7,7 @@
 //
 
 #import "WordcampViewController.h"
+#import "VideoGridViewController_Subclass.h"
 
 @interface WordcampViewController ()
 

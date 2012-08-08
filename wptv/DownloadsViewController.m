@@ -7,12 +7,18 @@
 //
 
 #import "DownloadsViewController.h"
+#import "VideoGridViewController_Subclass.h"
+#import "Video.h"
 
 @interface DownloadsViewController ()
 
 @end
 
 @implementation DownloadsViewController
+
+- (void)configureCell:(KKGridViewCell *)cell forVideo:(Video *)video {
+    [super configureCell:cell forVideo:video];
+}
 
 - (NSDictionary *)videoQuery {
     return nil;

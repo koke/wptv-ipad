@@ -7,6 +7,7 @@
 //
 
 #import "HowtoViewController.h"
+#import "VideoGridViewController_Subclass.h"
 
 @interface HowtoViewController ()
 

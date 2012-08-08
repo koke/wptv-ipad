@@ -7,6 +7,7 @@
 //
 
 #import "FeaturedViewController.h"
+#import "VideoGridViewController_Subclass.h"
 #import "Video.h"
 
 @interface FeaturedViewController ()

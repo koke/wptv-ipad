@@ -9,6 +9,7 @@
 #import <MediaPlayer/MediaPlayer.h>
 
 #import "VideoGridViewController.h"
+#import "VideoGridViewController_Subclass.h"
 #import "VideoViewController.h"
 #import "Video.h"
 
@@ -93,17 +94,23 @@ KKIndexPath *KKIndexPathFromNSIndexPath(NSIndexPath *indexPath) {
 }
 
 - (KKGridViewCell *)gridView:(KKGridView *)gridView cellForItemAtIndexPath:(KKIndexPath *)indexPath {
-    Video *video = [self.resultsController objectAtIndexPath:NSIndexPathFromKKIndexPath(indexPath)];
     KKGridViewCell *cell = [KKGridViewCell cellForGridView:gridView];
+    Video *video = [self.resultsController objectAtIndexPath:NSIndexPathFromKKIndexPath(indexPath)];
+    [self configureCell:cell forVideo:video];
+
+    return cell;
+}
+
+- (void)configureCell:(KKGridViewCell *)cell forVideo:(Video *)video {
     cell.backgroundColor = [UIColor redColor];
     UIImageView *thumbnailView = [[UIImageView alloc] initWithFrame:cell.bounds];
     [thumbnailView setImageWithURL:video.thumbnailURL];
     [cell.contentView addSubview:thumbnailView];
-
+    
     UIView *background = [[UIView alloc] initWithFrame:CGRectMake(0, 100, 250, 40)];
     background.backgroundColor = [UIColor colorWithWhite:0.0f alpha:0.8f];
     [cell.contentView addSubview:background];
-
+    
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 105, 240, 30)];
     titleLabel.backgroundColor = [UIColor clearColor];
     titleLabel.numberOfLines = 2;
@@ -114,9 +121,7 @@ KKIndexPath *KKIndexPathFromNSIndexPath(NSIndexPath *indexPath) {
     } else {
         titleLabel.text = [NSString stringWithFormat:@"%@", video.title];
     }
-    [cell.contentView addSubview:titleLabel];
-
-    return cell;
+    [cell.contentView addSubview:titleLabel];    
 }
 
 #pragma mark - KKGridViewDelegate

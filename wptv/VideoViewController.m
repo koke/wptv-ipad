@@ -12,7 +12,6 @@
 
 @interface VideoViewController ()
 @property (strong) MPMoviePlayerController *mplayer;
-- (void)updateVideoDetails;
 @end
 
 @implementation VideoViewController

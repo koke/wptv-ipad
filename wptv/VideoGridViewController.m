@@ -11,9 +11,8 @@
 #import "VideoGridViewController.h"
 #import "VideoGridViewController_Subclass.h"
 #import "VideoViewController.h"
+#import "VideoGridViewCell.h"
 #import "Video.h"
-
-#import "UIImageView+AFNetworking.h"
 
 NSIndexPath *NSIndexPathFromKKIndexPath(KKIndexPath *indexPath) {
     return [NSIndexPath indexPathForRow:indexPath.index inSection:indexPath.section];
@@ -26,8 +25,6 @@ KKIndexPath *KKIndexPathFromNSIndexPath(NSIndexPath *indexPath) {
 @interface VideoGridViewController ()
 @property (nonatomic,strong) NSFetchedResultsController *resultsController;
 @property (nonatomic,strong) UIBarButtonItem *reloadButton;
-- (void)reload:(id)sender;
-- (NSDictionary *)videoQuery;
 @end
 
 @implementation VideoGridViewController
@@ -94,34 +91,15 @@ KKIndexPath *KKIndexPathFromNSIndexPath(NSIndexPath *indexPath) {
 }
 
 - (KKGridViewCell *)gridView:(KKGridView *)gridView cellForItemAtIndexPath:(KKIndexPath *)indexPath {
-    KKGridViewCell *cell = [KKGridViewCell cellForGridView:gridView];
+    VideoGridViewCell *cell = [VideoGridViewCell cellForGridView:gridView];
     Video *video = [self.resultsController objectAtIndexPath:NSIndexPathFromKKIndexPath(indexPath)];
     [self configureCell:cell forVideo:video];
 
     return cell;
 }
 
-- (void)configureCell:(KKGridViewCell *)cell forVideo:(Video *)video {
-    cell.backgroundColor = [UIColor redColor];
-    UIImageView *thumbnailView = [[UIImageView alloc] initWithFrame:cell.bounds];
-    [thumbnailView setImageWithURL:video.thumbnailURL];
-    [cell.contentView addSubview:thumbnailView];
-    
-    UIView *background = [[UIView alloc] initWithFrame:CGRectMake(0, 100, 250, 40)];
-    background.backgroundColor = [UIColor colorWithWhite:0.0f alpha:0.8f];
-    [cell.contentView addSubview:background];
-    
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 105, 240, 30)];
-    titleLabel.backgroundColor = [UIColor clearColor];
-    titleLabel.numberOfLines = 2;
-    titleLabel.textColor = [UIColor whiteColor];
-    titleLabel.font = [UIFont systemFontOfSize:12.0f];
-    if (video.speaker) {
-        titleLabel.text = [NSString stringWithFormat:@"%@\n%@", video.speaker, video.title];
-    } else {
-        titleLabel.text = [NSString stringWithFormat:@"%@", video.title];
-    }
-    [cell.contentView addSubview:titleLabel];    
+- (void)configureCell:(VideoGridViewCell *)cell forVideo:(Video *)video {
+    cell.video = video;
 }
 
 #pragma mark - KKGridViewDelegate

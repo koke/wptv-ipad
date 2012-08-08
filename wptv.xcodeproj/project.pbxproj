@@ -23,6 +23,7 @@
 		E184B6C115D168F8003EBED5 /* Tag.m in Sources */ = {isa = PBXBuildFile; fileRef = E184B6C015D168F8003EBED5 /* Tag.m */; };
 		E184B6CA15D1935A003EBED5 /* ISO8601DateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = E184B6C915D1935A003EBED5 /* ISO8601DateFormatter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E184B6CD15D1E317003EBED5 /* DownloadsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E184B6CC15D1E317003EBED5 /* DownloadsViewController.m */; };
+		E184B6E115D270D8003EBED5 /* VideoGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E184B6E015D270D8003EBED5 /* VideoGridViewCell.m */; };
 		E1CC892A15D1187300DF3B60 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1CC892915D1187300DF3B60 /* MediaPlayer.framework */; };
 		E1CC892F15D12F1600DF3B60 /* FeaturedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CC892E15D12F1600DF3B60 /* FeaturedViewController.m */; };
 		E1CC893215D1309400DF3B60 /* WordcampViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CC893115D1309400DF3B60 /* WordcampViewController.m */; };
@@ -61,6 +62,8 @@
 		E184B6CB15D1E317003EBED5 /* DownloadsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadsViewController.h; sourceTree = "<group>"; };
 		E184B6CC15D1E317003EBED5 /* DownloadsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadsViewController.m; sourceTree = "<group>"; };
 		E184B6CE15D1F0F2003EBED5 /* VideoGridViewController_Subclass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoGridViewController_Subclass.h; sourceTree = "<group>"; };
+		E184B6DF15D270D8003EBED5 /* VideoGridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoGridViewCell.h; sourceTree = "<group>"; };
+		E184B6E015D270D8003EBED5 /* VideoGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoGridViewCell.m; sourceTree = "<group>"; };
 		E1CC892915D1187300DF3B60 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		E1CC892D15D12F1600DF3B60 /* FeaturedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeaturedViewController.h; sourceTree = "<group>"; };
 		E1CC892E15D12F1600DF3B60 /* FeaturedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeaturedViewController.m; sourceTree = "<group>"; };
@@ -124,6 +127,7 @@
 		E135422C158FF9500052465B /* wptv */ = {
 			isa = PBXGroup;
 			children = (
+				E184B6DD15D270BB003EBED5 /* Views */,
 				E184B6C815D1935A003EBED5 /* ISO8601DateFormatter.h */,
 				E184B6C915D1935A003EBED5 /* ISO8601DateFormatter.m */,
 				E1354235158FF9500052465B /* AppDelegate.h */,
@@ -169,6 +173,15 @@
 				E134F0FF158FFCD40088FEF2 /* AFWordpressComClient.m */,
 			);
 			name = API;
+			sourceTree = "<group>";
+		};
+		E184B6DD15D270BB003EBED5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E184B6DF15D270D8003EBED5 /* VideoGridViewCell.h */,
+				E184B6E015D270D8003EBED5 /* VideoGridViewCell.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		E1CC892C15D12EDF00DF3B60 /* Controllers */ = {
@@ -286,6 +299,7 @@
 				E184B6C115D168F8003EBED5 /* Tag.m in Sources */,
 				E184B6CA15D1935A003EBED5 /* ISO8601DateFormatter.m in Sources */,
 				E184B6CD15D1E317003EBED5 /* DownloadsViewController.m in Sources */,
+				E184B6E115D270D8003EBED5 /* VideoGridViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

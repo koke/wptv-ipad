@@ -3,5 +3,5 @@ PODS:
   - KKGridView (0.6.8.2)
 
 DEPENDENCIES:
-  - AFNetworking (~> 1.0)
-  - KKGridView (from `git://github.com/kolinkrewinkel/KKGridView.git')
+  - AFNetworking (~> 1.0RC1)
+  - KKGridView (from `git@github.com:koke/KKGridView.git')

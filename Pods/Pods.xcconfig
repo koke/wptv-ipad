@@ -1,4 +1,4 @@
-OTHER_LDFLAGS = -ObjC -all_load -framework SystemConfiguration -lstdc++ -framework QuartzCore
-HEADER_SEARCH_PATHS = "$(PODS_ROOT)/Headers" "$(PODS_ROOT)/Headers/AFNetworking" "$(PODS_ROOT)/Headers/KKGridView"
-PODS_ROOT = $(SRCROOT)/Pods
+OTHER_LDFLAGS = -ObjC -lstdc++ -framework QuartzCore -framework SystemConfiguration
 ALWAYS_SEARCH_USER_PATHS = YES
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/AFNetworking" "${PODS_ROOT}/Headers/KKGridView"
+PODS_ROOT = ${SRCROOT}/Pods

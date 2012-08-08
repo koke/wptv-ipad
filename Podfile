@@ -1,3 +1,3 @@
 platform :ios
-dependency 'AFNetworking', '~> 1.0'
-dependency 'KKGridView', :git => 'git://github.com/kolinkrewinkel/KKGridView.git'
+dependency 'AFNetworking', '~> 1.0RC1'
+dependency 'KKGridView', :git => 'git@github.com:koke/KKGridView.git'
